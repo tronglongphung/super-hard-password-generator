@@ -4,16 +4,22 @@ var specials = '!@#$%^&*()_+{}:"<>?\|[];\',./`~';
 var lowercase = 'abcdefghijklmnopqrstuvwxyz';
 var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var numbers = '0123456789';
-
+var passwordLength = prompt("How many characters do you want in a password?", "From 8 to 128 characters")
 // Write password to the #password input
 function writePassword() {
-  
-while(confirm(writePassword)){
-  'Do you want to create a password?'
-  }
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  if (confirm("Do you want to generate a password?")){
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
 
+    if (passwordLength == null || passwordLength == "" ){
+
+    } else {
+      
+    }
+
+  }else {
+    return
+  }
 
 
   passwordText.value = password;
