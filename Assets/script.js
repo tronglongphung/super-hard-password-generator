@@ -19,6 +19,7 @@ function generatePassword() {
   if (confirm("Do you want special characters")){
     passwordSelection = specials;
     console.log(passwordSelection)
+    console.log(password)
   } else {
     passwordSelection = passwordSelection;
   }
@@ -51,8 +52,9 @@ function generatePassword() {
   for (let index = 0; index < passwordLength; index++) {
     // make character set array from accepted characters
     // calculate random index of full array 
-    [Math.floor(Math.random() * passwordSelection)]
-    return passwordSelection
+     password += passwordSelection[Math.floor(Math.random() * passwordSelection.length)]
+    console.log(password);
+    
   }
 }
 
