@@ -47,15 +47,17 @@ function generatePassword() {
   passwordSelection = passwordSelection;
   console.log(passwordSelection)
   }
-
+  password = ''
 // this is a loop
   for (let index = 0; index < passwordLength; index++) {
     // make character set array from accepted characters
     // calculate random index of full array 
-     password += passwordSelection[Math.floor(Math.random() * passwordSelection.length)]
+    password += passwordSelection[Math.floor(Math.random() * passwordSelection.length)]
+    
     console.log(password);
     
   }
+  return password
 }
 
 
@@ -67,6 +69,7 @@ function writePassword() {
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  
 
   passwordText.value = password;
   
